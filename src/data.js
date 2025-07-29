@@ -1,25 +1,25 @@
 let shopItemsData = [{
     id: "hard-hat",
     name: "Hard Hat",
-    price: 45,
+    price: 29,
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
     img: "images/hard-hat.jpg"
 },{
-    id: "dgheriuy",
-    name: "Office Shirt",
-    price: 300,
+    id: "navy-overall",
+    name: "Navy Overall",
+    price: 220,
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
-    img: "images/img-2.jpg"
+    img: "images/overall.jpg"
 },{
-    id: "vhfgyiu",
-    name: "T Shirt",
-    price: 25,
+    id: "jacket",
+    name: "Reflective Jacket",
+    price: 160,
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
-    img: "images/img-3.jpg"
+    img: "images/jacket.jpg"
 },{
-    id: "dfgghjk",
-    name: "Mens Suit",
-    price: 1000,
+    id: "boots",
+    name: "Safety Boots",
+    price: 350,
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
-    img: "images/img-4.jpg"
+    img: "images/boots.jpg"
 }]
