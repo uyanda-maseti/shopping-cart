@@ -52,35 +52,31 @@ let generateCartItems = () => {
 generateCartItems()
 
 let increment = (id) => {
-    let selectedItem = id
-    let search = basket.find((x) => x.id === selectedItem.id)
-
+    let search = basket.find((x) => x.id === id)
     if (search === undefined) {
         basket.push({
-            id: selectedItem.id,
+            id: id,
             item: 1,
-            
         })
     } else {
         search.item += 1
     }
     generateCartItems()
-    update(selectedItem.id)
+    update(id)
     localStorage.setItem("data", JSON.stringify(basket))
 }
+
 let decrement = (id) => {
-    let selectedItem = id
-    let search = basket.find((x) => x.id === selectedItem.id)
-    if (search  === undefined) return
+    let search = basket.find((x) => x.id === id)
+    if (search === undefined) return
     else if (search.item === 0) return 
     else {
         search.item -= 1
     }
-    update(selectedItem.id)
+    update(id)
     basket = basket.filter((x) => x.item !== 0)
     generateCartItems()
     localStorage.setItem("data", JSON.stringify(basket))
-
 }
 let update = (id) => {
     let search = basket.find((x) => x.id === id)
