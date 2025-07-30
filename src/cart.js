@@ -112,11 +112,15 @@ let totalAmount = () => {
         }).reduce((x, y) => x+y, 0)
         label.innerHTML = `
         <h2>Total Bill: R ${amount}</h2>
-        <button class="checkout">Checkout</button>
+        <button onclick="checkout()" class="checkout">Checkout</button>
         <button onclick="clearCart()" class="removeAll">Clear Cart</button>
         `
     } else return
 
+}
+
+const checkout = () => {
+    alert("Thank you for your business")
 }
 
 totalAmount()
