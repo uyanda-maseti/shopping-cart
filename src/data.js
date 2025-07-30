@@ -1,11 +1,11 @@
 let shopItemsData = [{
-    id: "hard-hat",
+    id: "hardhat",
     name: "Hard Hat",
     price: 29,
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
     img: "images/hard-hat.jpg"
 },{
-    id: "navy-overall",
+    id: "navyoverall",
     name: "Navy Overall",
     price: 220,
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
