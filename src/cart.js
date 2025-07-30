@@ -16,28 +16,28 @@ let generateCartItems = () => {
         return shoppingCart.innerHTML = basket.map((x) => {
             let {id, item} = x
             let search = shopItemsData.find((y) => y.id === id) || []
-            return `
-            <div class="cart-item">
-                <img width="100" src=${search.img}>
-                <div class="details">
-                    
-                    <div class="title-price-x">
-                        <h4 class="title-price">
-                            <p>${search.name}</p>
-                            <p class="cart-item-price">R ${search.price}</p>
-                        <h4>
-                        <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
-                    </div>
-
-                    <div class="buttons">
-                        <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                        <div id=${id} class="quantity">${item}</div>
-                        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
-                    </div>
-                    <h3>R ${item * search.price}</h3>
-                </div>
+            // ...existing code...
+return `
+    <div class="cart-item">
+        <img width="100" src=${search.img}>
+        <div class="details">
+            <div class="title-price-x">
+                <h4 class="title-price">
+                    <p>${search.name}</p>
+                    <p class="cart-item-price">R ${search.price}</p>
+                <h4>
+                <i onclick="removeItem('${id}')" class="bi bi-x-lg"></i>
             </div>
-            `
+            <div class="buttons">
+                <i onclick="decrement('${id}')" class="bi bi-dash-lg"></i>
+                <div id=${id} class="quantity">${item}</div>
+                <i onclick="increment('${id}')" class="bi bi-plus-lg"></i>
+            </div>
+            <h3>R ${item * search.price}</h3>
+        </div>
+    </div>
+`
+// ...existing code...
         }).join('')
     } else {
         shoppingCart.innerHTML = ``
