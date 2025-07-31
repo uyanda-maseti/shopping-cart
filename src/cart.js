@@ -18,7 +18,7 @@ let generateCartItems = () => {
             let search = shopItemsData.find((y) => y.id === id) || []
             // ...existing code...
 return `
-    <div class="cart-item">
+    <div class="cart-item"  onclick="increment('${id}')">
         <img width="100" src=${search.img}>
         <div class="details">
             <div class="title-price-x">
@@ -50,6 +50,9 @@ return `
 }
 
 generateCartItems()
+const checkout = () => {
+    alert("Thank you for your business")
+}
 
 let increment = (id) => {
     let search = basket.find((x) => x.id === id)
@@ -119,8 +122,5 @@ let totalAmount = () => {
 
 }
 
-const checkout = () => {
-    alert("Thank you for your business")
-}
 
 totalAmount()
